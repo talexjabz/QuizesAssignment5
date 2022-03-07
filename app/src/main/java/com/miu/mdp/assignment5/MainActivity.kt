@@ -37,9 +37,9 @@ class MainActivity : AppCompatActivity() {
 
         with(binder) {
             submitBtn.setOnClickListener {
-                if (safeCall.isChecked) correctCount += 1
-                if (elvis.isChecked) correctCount += 1
-                if (whenOperator.isChecked) correctCount -= 0
+                if (dataClass.isChecked) correctCount += 1
+                if (className.isChecked) correctCount += 1
+                if (classClassName.isChecked) correctCount -= 0
                 val date = LocalDateTime.now()
                 val format = date.format(DateTimeFormatter.ISO_LOCAL_DATE_TIME)
 
@@ -66,9 +66,9 @@ class MainActivity : AppCompatActivity() {
             reset.setOnClickListener {
                 correctCount = 0.0
                 qnRadioGroup.clearCheck()
-                elvis.isChecked = false
-                whenOperator.isChecked = false
-                safeCall.isChecked = false
+                classClassName.isChecked = false
+                className .isChecked = false
+                dataClass.isChecked = false
             }
         }
 
